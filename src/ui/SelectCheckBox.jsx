@@ -1,22 +1,6 @@
 import Checkbox from "@mui/material/Checkbox";
-import { makeStyles } from "@mui/styles";
 import { FormControlLabel } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
-const useStyles = makeStyles((theme) => ({
-  checkbox: {
-    transform: "scale(1.3)",
-    marginRight: "10px",
-
-    "&.Mui-checked": {
-      color: "var(--color-black-light)",
-    },
-  },
-  label: {
-    fontSize: "1.1rem",
-    fontFamily: "inherit",
-  },
-}));
 
 function SelectCheckBox({ value, setValue, options }) {
   const handleCheckBoxChange = (option) => {
@@ -28,7 +12,6 @@ function SelectCheckBox({ value, setValue, options }) {
     setValue(newValue);
   };
 
-  const classes = useStyles();
   const { t } = useTranslation(["glossary"]);
 
   return (
@@ -40,11 +23,25 @@ function SelectCheckBox({ value, setValue, options }) {
               <Checkbox
                 checked={value.includes(option.value)}
                 onChange={() => handleCheckBoxChange(option.value)}
-                className={classes.checkbox}
+                sx={{
+                  transform: "scale(1.3)",
+                  marginRight: "10px",
+                  "&.Mui-checked": {
+                    color: "var(--color-black-light)",
+                  },
+                  "&:hover ": {
+                    backgroundColor: "rgba(0, 0, 0, 0.04)",
+                  },
+                }}
               />
             }
             label={t(`glossary:${option.label}`)}
-            classes={{ label: classes.label }}
+            sx={{
+              ".MuiFormControlLabel-label": {
+                fontSize: "1.1rem",
+                fontFamily: "inherit",
+              },
+            }}
           />
         </div>
       ))}

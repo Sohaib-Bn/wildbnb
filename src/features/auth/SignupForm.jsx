@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useSignup } from "./useSignup";
-import { Divider } from "@mui/joy";
+import Divider from "@mui/material/Divider";
 
 import Button from "../../ui/Button";
 import FormRow from "../../ui/FormRow";

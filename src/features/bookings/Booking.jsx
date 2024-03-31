@@ -1,6 +1,7 @@
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
-import { Divider } from "@mui/joy";
+import Divider from "@mui/material/Divider";
+
 import { useBookingContenxt } from "../../context/ValidatedBookingContext";
 import { useAppContext } from "../../context/AppContext";
 

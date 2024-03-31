@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useLogin } from "./useLogin";
 import { useForm } from "react-hook-form";
-import { Divider } from "@mui/joy";
+import Divider from "@mui/material/Divider";
 import { useSignupWithGoogle } from "./useSignupWithGoogle";
 
 import Button from "../../ui/Button";
