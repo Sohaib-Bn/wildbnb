@@ -1,5 +1,3 @@
-import { LuDot } from "react-icons/lu";
-
 function FooterLink({ link, children }) {
   return (
     <li className="flex items-center gap-3">

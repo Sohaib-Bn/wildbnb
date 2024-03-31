@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@auth0/auth0-react": "^2.2.4",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/joy": "^5.0.0-beta.29",
@@ -23,7 +22,6 @@
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
     "flag-icons": "^7.1.0",
-    "google-translate-api": "^2.3.0",
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-chained-backend": "^4.6.2",
