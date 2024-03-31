@@ -19,6 +19,7 @@ function LanguageChanger() {
     textTransform: "inherit",
     fontFamily: "inherit",
     fontWeight: "meduim",
+    fontSize: "0.78rem",
 
     "&:hover": { backgroundColor: "var(--color-zinc-200)" },
   };
@@ -46,10 +47,18 @@ function LanguageChanger() {
         onClick={handleClick}
         sx={buttonStyle}
       >
-        <HiOutlineGlobeAlt size={22} />
+        <HiOutlineGlobeAlt className="mb-[3px]" size={20} />
         <span>
-          {capitalize(SUPPORTED_LANGUAGES[i18n.language]?.name.split(",")[0])} (
-          {SUPPORTED_LANGUAGES[i18n.language]?.countryCode?.toUpperCase()})
+          {capitalize(
+            SUPPORTED_LANGUAGES[i18n.language.split("-")[0]]?.name.split(
+              ","
+            )[0] || "English"
+          )}{" "}
+          (
+          {SUPPORTED_LANGUAGES[
+            i18n.language.split("-")[0]
+          ]?.countryCode?.toUpperCase() || "US"}
+          )
         </span>
       </Button>
       <Menu
@@ -69,14 +78,15 @@ function LanguageChanger() {
             borderRadius: "8px",
             boxShadow: "0 2px 6px 6px rgb(0 0 0 / 0.03)",
             backgroundColor: "var(--color-grey-50)",
+            fontSize: "0.85rem",
           },
         }}
       >
         {Object.keys(SUPPORTED_LANGUAGES).map((lng) => (
           <MenuItem
-            // selected={i18n.language === lng}
-            disabled={i18n.language === lng}
+            disabled={i18n.language.split("-")[0] === lng}
             style={{
+              fontSize: "inherit",
               fontFamily: "inherit",
               display: "flex",
               alignItems: "center",

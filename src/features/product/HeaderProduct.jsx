@@ -19,8 +19,8 @@ export function HeaderProduct({ showHeaderProductBookView }) {
   const regularPriceConverted = regularPrice * convertedCurrency;
 
   return createPortal(
-    <div className="header-product items-center justify-between flex py-4 px-20 h-full border-b border-colorGrey200">
-      <ul className="flex items-center gap-6">
+    <div className="header-product items-center justify-between flex py-4 px-16 h-full border-b border-colorGrey200">
+      <ul className="flex items-center gap-6 text-sm">
         {["Overview", "Location", "Reviews"].map((op, index) => (
           <li key={index}>
             <a
@@ -34,9 +34,9 @@ export function HeaderProduct({ showHeaderProductBookView }) {
         ))}
       </ul>
       {showHeaderProductBookView && (
-        <div className="flex items-center gap-6">
+        <div className="flex text-sm items-center gap-6">
           <div className="flex flex-col gap-[0.15rem]">
-            <p className="font-medium text-colorBlack text-[17px]">
+            <p className="font-cairo font-semibold text-colorBlack text-[17px]">
               {formatCurrency(
                 regularPriceConverted,
                 i18n.language,
@@ -44,7 +44,7 @@ export function HeaderProduct({ showHeaderProductBookView }) {
               )}{" "}
               <span className="font-normal text-sm">night</span>
             </p>
-            <div className="flex items-center text-[14px] gap-1">
+            <div className="flex items-center text-xs gap-1">
               <div className="flex items-center gap-[5px]  text-colorGrey700">
                 <FaStar className="relative bottom-[1.5px]" />
                 <span className="font-medium ">{averageRate}</span>
@@ -60,7 +60,7 @@ export function HeaderProduct({ showHeaderProductBookView }) {
             </div>
           </div>
           <a
-            className="text-colorWhite px-8 py-[14px] font-medium text-[17px] transition-colors duration-300 bg-colorBrand800 hover:bg-colorBrand900 rounded-lg"
+            className="text-colorWhite px-6 py-[14px] font-medium text-[16px] transition-colors duration-300 bg-colorBrand800 hover:bg-colorBrand900 rounded-lg"
             onClick={handleLinkScroll}
             href="#booking-section"
           >

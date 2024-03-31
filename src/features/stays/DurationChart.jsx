@@ -81,15 +81,15 @@ function DurationChart({ stays }) {
   const data = prepareData(startData, stays);
 
   return (
-    <div className="px-8 py-6 relative text-sm font-medium bg-colorWhite min-h-[20rem] rounded-lg border border-colorGrey100">
-      <h1 className="text-xl mb-2">Duration night summary</h1>
+    <div className="px-8 py-6 relative text-sm font-medium bg-colorWhite min-h-[10rem] rounded-lg border border-colorGrey100">
+      <h1 className="text-lg mb-2">Duration night summary</h1>
       {Boolean(!stays.length) && (
         <div className="text-center absolute top-[50%] right-[50%] translate-x-[50%] font-normal">
           No data to show...
         </div>
       )}
       {Boolean(stays.length) && (
-        <ResponsiveContainer height={240} width="100%">
+        <ResponsiveContainer height={200} width="100%">
           <PieChart>
             <Pie
               data={data}
@@ -97,8 +97,8 @@ function DurationChart({ stays }) {
               nameKey="duration"
               cx="40%"
               cy="50%"
-              innerRadius={75}
-              outerRadius={100}
+              innerRadius={62}
+              outerRadius={85}
               paddingAngle={3}
             >
               {data.map((entry) => (

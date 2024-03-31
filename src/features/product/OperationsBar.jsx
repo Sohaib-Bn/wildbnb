@@ -1,9 +1,9 @@
 import { CgFormatSlash } from "react-icons/cg";
 import { NavLink, useParams } from "react-router-dom";
-import ShareButton from "./ShareButton";
-
-import LikeButton from "../../ui/ButtonLike";
 import { useProduct } from "./useProduct";
+
+import ShareButton from "./ShareButton";
+import LikeButton from "../../ui/ButtonLike";
 
 function OperationsBar() {
   const { productType } = useParams();
@@ -12,8 +12,8 @@ function OperationsBar() {
   } = useProduct();
 
   return (
-    <div className="flex items-center justify-between">
-      <ul className="flex items-center text-colorGrey500">
+    <div className="flex items-center justify-between mt-2">
+      <ul className="flex text-sm items-center text-colorGrey500 ">
         <li>
           <NavLink
             className={({ isActive }) =>
@@ -21,7 +21,6 @@ function OperationsBar() {
             }
             to={"/"}
           >
-            {/* {t("common:home")} */}
             Home
           </NavLink>
         </li>
@@ -33,12 +32,11 @@ function OperationsBar() {
               isActive ? "text-colorBlack font-medium" : ""
             }
           >
-            {/* {t(`header:${productType}`)} */}
             {productType}
           </NavLink>
         </li>
       </ul>
-      <div className="flex items-center">
+      <div className="flex text-sm items-center">
         <ShareButton />
         <LikeButton redirectTo={window.location.href} productId={id} />
       </div>

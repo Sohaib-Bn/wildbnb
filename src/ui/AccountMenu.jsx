@@ -38,7 +38,7 @@ export default function AccountMenu() {
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
         <Tooltip sx={{}} title="Account settings">
           <button
-            className="px-4 py-2 border border-colorGrey200 hover:shadow-md rounded-full flex items-center gap-3"
+            className="px-[0.9rem] py-2 border border-colorGrey200 hover:shadow-md rounded-full flex items-center gap-3"
             onClick={handleClick}
             size="small"
             sx={{ ml: 2 }}
@@ -46,11 +46,11 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <HiOutlineBars3 size={22} />
+            <HiOutlineBars3 size={20} />
             {userAvatar !== "" ? (
               <img className="w-9 rounded-full" src={userAvatar} alt="avatar" />
             ) : (
-              <HiUserCircle size={40} color="#71717a" />
+              <HiUserCircle size={35} color="#71717a" />
             )}
           </button>
         </Tooltip>
@@ -63,7 +63,7 @@ export default function AccountMenu() {
         onClick={handleClose}
         PaperProps={{
           style: {
-            width: "15rem",
+            width: "14rem",
             padding: "0",
             transform: "translateY(10px)",
             borderRadius: "8px",
@@ -77,7 +77,7 @@ export default function AccountMenu() {
         {isAuthorized && (
           <MenuItem
             style={{
-              fontSize: "0.95rem",
+              fontSize: "0.85rem",
               fontFamily: "inherit",
               padding: "0.8rem 1rem",
             }}
@@ -93,7 +93,7 @@ export default function AccountMenu() {
         {isAuthorized && (
           <MenuItem
             style={{
-              fontSize: "0.95rem",
+              fontSize: "0.85rem",
               fontFamily: "inherit",
               padding: "0.8rem 1rem",
             }}
@@ -109,7 +109,7 @@ export default function AccountMenu() {
         {!isAuthorized && (
           <MenuItem
             style={{
-              fontSize: "0.95rem",
+              fontSize: "0.85rem",
               fontFamily: "inherit",
               fontWeight: "500",
               padding: "0.8rem 1rem",
@@ -126,7 +126,8 @@ export default function AccountMenu() {
         {!isAuthorized && (
           <MenuItem
             style={{
-              fontSize: "0.95rem",
+              fontSize: "0.85rem",
+
               fontFamily: "inherit",
               padding: "0.8rem 1rem",
             }}
@@ -143,7 +144,7 @@ export default function AccountMenu() {
 
         <MenuItem
           style={{
-            fontSize: "0.95rem",
+            fontSize: "0.85rem",
             fontFamily: "inherit",
             padding: "0.8rem 1rem",
           }}
@@ -156,7 +157,7 @@ export default function AccountMenu() {
           <MenuItem
             style={{
               color: "var(--color-red-800)",
-              fontSize: "0.95rem",
+              fontSize: "0.85rem",
               fontFamily: "inherit",
               padding: "0.8rem 1rem",
             }}

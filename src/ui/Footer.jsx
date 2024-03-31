@@ -40,7 +40,7 @@ function Footer() {
     <footer
       ref={footerRef}
       id="footer"
-      className="bg-colorGrey800 mt-10 px-16 text-colorGrey300 flex justify-between items-center py-7 "
+      className="bg-colorGrey800 mt-10 text-sm px-14 text-colorGrey300 flex justify-between items-center py-7 "
     >
       <div className="flex flex-col gap-5">
         <div className="flex gap-2">
@@ -60,7 +60,7 @@ function Footer() {
             Sohaib Benyamna
           </a>
           <span>&bull;</span>
-          <p>Design inspired from airbnb</p>
+          <p>Design is inspired from airbnb</p>
           <span>&bull;</span>
           <p>The platform still in the beta copy</p>
         </div>

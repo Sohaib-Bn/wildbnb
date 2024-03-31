@@ -10,16 +10,12 @@ function Header() {
       className="flex flex-col sticky top-0 z-[1001] bg-colorGrey50"
     >
       <div
-        className="header-home flex items-centertransition-[height] duration-200 border-b border-colorGrey200 py-4 px-16 h-full
+        className="header-home flex items-centertransition-[height] duration-200 border-b border-colorGrey200 py-4 px-14 h-full
         "
       >
         <div className="grow flex">
           <Link to="/">
-            <img
-              className="w-[5.5rem] "
-              src="/public/logo-light.svg"
-              alt="logo"
-            />
+            <img className="w-[5rem] " src="/logo-light.svg" alt="logo" />
           </Link>
         </div>
         <SearchBar />

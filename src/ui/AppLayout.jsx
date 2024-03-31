@@ -7,7 +7,7 @@ function AppLayout() {
   const { showMapProducts } = useAppContext();
 
   return (
-    <div className="transition-all duration-800 grid grid-rows-[var(--navigation-bar-offset)_1fr_auto] min-h-screen bg-colorGrey50 relative gap-3">
+    <div className="transition-all duration-800 grid grid-rows-[var(--navigation-bar-offset)_1fr_auto] min-h-screen bg-colorGrey50 relative">
       <Header />
       <main>
         <Outlet />

@@ -74,7 +74,7 @@ function AddReviewForm({ setShowForm }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-sm">
       <div className="flex items-center gap-4">
         <span>How was your trip?</span>
 
@@ -100,7 +100,6 @@ function AddReviewForm({ setShowForm }) {
           disabled={isPending}
           onClick={() => setShowForm(false)}
           variation="secondary"
-          size="small"
         >
           Cancel
         </Button>

@@ -2,12 +2,12 @@ import { BiDollar } from "react-icons/bi";
 import { useAppContext } from "../context/AppContext";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { t } from "i18next";
 import { SUPPORTED_CURRENCIES } from "../utils/constants";
 
 import Modal from "./Modal";
 import SelectHorizontal from "./SelectHorizontal";
 import Button from "./Button";
-import { t } from "i18next";
 
 function CurrencyChanger({ showCurrencyIcon = true, underline = false }) {
   const style = `transition-all hover:underline flex items-center gap-1  ${
@@ -55,17 +55,17 @@ function ChangeCurrencyForm({ onCloseModal }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid grid-rows-[minmax(auto,_4.6rem)_1fr] "
+      className="grid grid-rows-[minmax(auto,_4.1rem)_1fr] "
     >
-      <header className=" px-6 text-lg font-semibold flex items-center justify-center border-b border-colorGrey200 text-colorBlackLight">
+      <header className=" px-6 font-semibold flex items-center justify-center border-b border-colorGrey200 text-colorBlackLight">
         <p>{t("common:currency")}</p>
       </header>
       <main className="flex flex-col gap-4 p-6">
-        <h1 className="font-medium text-[1.6rem] text-colorGrey900">
+        <h1 className="font-medium text-[1.4rem] text-colorGrey900">
           {t("common:choose_currency_form.title")}
         </h1>
 
-        <div className="flex items-center justify-center px-12 mt-2">
+        <div className="flex text-sm items-center justify-center px-12 mt-2">
           <SelectHorizontal
             value={currency}
             setValue={setCurrency}
@@ -73,7 +73,7 @@ function ChangeCurrencyForm({ onCloseModal }) {
           />
         </div>
         <footer className="pt-5 px-6 ">
-          <div className="flex items-center justify-end">
+          <div className="flex text-sm items-center justify-end">
             <Button>{t("common:confirm_button")}</Button>
           </div>
         </footer>

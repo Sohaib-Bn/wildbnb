@@ -109,13 +109,13 @@ function RangePriceFilter() {
 
   return (
     <div className="flex flex-col gap-4 border-b border-colorGrey200 py-6">
-      <h1 className="font-medium text-[1.6rem] text-colorGrey900">
+      <h1 className="font-medium text-[1.45rem] text-colorGrey900">
         {t("filters:filter.price_range.title")}
       </h1>
-      <p className="font-light text-[14.3px]">
+      <p className="font-light text-[13px]">
         {t("filters:filter.price_range.description")}
       </p>
-      <div className="px-12 mt-2 flex flex-col gap-y-4">
+      <div className="px-10 mt-2 flex flex-col gap-y-4">
         <div className="flex items-center justify-center">
           <RangeSlider
             rangeValue={priceRangeSliderPercentage}
@@ -125,11 +125,11 @@ function RangePriceFilter() {
 
         <div className="flex justify-between items-center gap-6">
           <div
-            className={`border-2 rounded-md border-colorGrey300 p-2 flex flex-col grow transition-all ${
-              minInputFocus ? "border-colorBlackLight " : ""
+            className={`border-[1.5px] rounded-md border-colorGrey300 p-2 flex flex-col grow transition-all ${
+              minInputFocus ? "border-colorBlackLight" : ""
             }`}
           >
-            <p className="text-sm text-colorGrey900/70">
+            <p className="text-xs text-colorGrey900/70">
               {t("glossary:maximum")}
             </p>
             <div className="flex items-center gap-2">
@@ -153,11 +153,11 @@ function RangePriceFilter() {
           </div>
           <div className="h-[1px] w-[1.3rem] bg-colorGrey400 " />
           <div
-            className={`border-2 rounded-md border-colorGrey300 p-2 flex flex-col grow transition-all ${
+            className={`border-[1.5px] rounded-md border-colorGrey300 p-2 flex flex-col grow transition-all ${
               maxInputFocus ? "border-colorBlackLight " : ""
             }`}
           >
-            <p className="text-sm text-colorGrey900/70">
+            <p className="text-xs text-colorGrey900/70">
               {" "}
               {t("glossary:minumum")}
             </p>

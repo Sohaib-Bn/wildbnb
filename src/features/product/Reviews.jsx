@@ -12,14 +12,13 @@ import { useUser } from "../auth/useUser";
 import Rating from "../../ui/Rating";
 import ReadOnlySlider from "../../ui/ReadOnlySlider";
 import SkeletonReviews from "./SkeletonRviews";
-
 import AddReviewForm from "./AddReviewForm";
 import ButtonAddReview from "../../ui/ButtonAddReview";
 
 function Reviews() {
   return (
-    <div id="reviews-section" className="flex flex-col gap-6">
-      <h2 className="font-semibold text-colorBlack text-2xl">Reviews</h2>
+    <div id="reviews-section" className="flex flex-col gap-6 mt-5">
+      <h2 className="font-semibold text-colorBlack text-[1.35rem]">Reviews</h2>
       <ReviewsOverView />
       <ReviewsList />
     </div>
@@ -43,14 +42,14 @@ function ReviewsOverView() {
         <h2 className="font-bold text-6xl text-colorGrey900">{averageRate}</h2>
         <Rating value={averageRate} />
         <p
-          className="font-nomal text-lg
+          className="font-nomal text-base
            text-colorGrey900 transition-all"
           href="/"
         >
           {count} reviews
         </p>
       </div>
-      <div className="w-[40%] flex flex-col-reverse">
+      <div className="w-[40%] flex flex-col-reverse text-sm">
         {Object.keys(starRatesParsed).map((rating) => (
           <div className="flex items-center gap-5" key={rating}>
             <span>{rating}</span>
@@ -71,7 +70,7 @@ function ReviewsList() {
   if (isLoading) return <SkeletonReviews />;
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 mt-5">
       <ul className="flex flex-col gap-10">
         {reviews.map((rev) => (
           <Review key={rev.id} reviewData={rev} />
@@ -91,7 +90,7 @@ function ReviewsList() {
               </div>
             )}
 
-            <div className="justify-self-end col-start-2">
+            <div className="justify-self-end text-sm col-start-2">
               <ButtonAddReview setShowForm={setShowForm} />
             </div>
           </>
@@ -201,14 +200,14 @@ function Review({ reviewData }) {
           alt="avatar"
         />
         <div>
-          <p className="font-medium text-[1.05rem] text-colorBlack">{name}</p>
-          <p className="font-light text-colorGrey500 text-[0.9rem]">
+          <p className="font-medium text-[.95rem] text-colorBlack">{name}</p>
+          <p className="font-light text-colorGrey500 text-[0.8rem]">
             {format(date, "MMMM do',' yyyy")}
           </p>
         </div>
       </div>
-      <Rating size="1.5rem" value={rate} />
-      <p>{review}</p>
+      <Rating size="1.3rem" value={rate} />
+      <p className="text-[0.95rem]">{review}</p>
       <div className="flex items-center gap-4">
         <button
           disabled={isPending}
@@ -217,7 +216,7 @@ function Review({ reviewData }) {
             isLiked ? "text-colorBlack scale-105" : "text-colorGrey600"
           }`}
         >
-          <AiOutlineLike size={21} />
+          <AiOutlineLike size={18} />
           <span>{likes ? likes : ""}</span>
         </button>
         <button
@@ -227,7 +226,7 @@ function Review({ reviewData }) {
             isDisliked ? "text-colorBlack scale-105" : "text-colorGrey600"
           }`}
         >
-          <AiOutlineDislike size={21} />
+          <AiOutlineDislike size={18} />
           <span>{dislikes ? dislikes : ""}</span>
         </button>
       </div>

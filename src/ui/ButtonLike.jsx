@@ -38,20 +38,15 @@ function LikeButton({ productId, redirectTo, type, ...props }) {
 
   if (type === "icon")
     return (
-      <button
-        // className={`${isPending ? "pointer-events-none" : ""}`}
-        disabled={isPending}
-        onClick={handleLikeProduct}
-        {...props}
-      >
+      <button disabled={isPending} onClick={handleLikeProduct} {...props}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
           aria-hidden="true"
           role="presentation"
           focusable="false"
-          height={28}
-          width={28}
+          height={26}
+          width={26}
           stroke="var(--color-grey-0)"
           fill={`${isLiked ? "white" : "rgba(0, 0, 0, 0.6)"}`}
           strokeWidth={2}

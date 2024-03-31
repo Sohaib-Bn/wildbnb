@@ -38,7 +38,7 @@ function SelectCheckBox({ value, setValue, options }) {
             label={t(`glossary:${option.label}`)}
             sx={{
               ".MuiFormControlLabel-label": {
-                fontSize: "1.1rem",
+                fontSize: "1rem",
                 fontFamily: "inherit",
               },
             }}

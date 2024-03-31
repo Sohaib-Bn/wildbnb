@@ -2,6 +2,7 @@ import { useProduct } from "./useProduct";
 import { HeaderProduct } from "./HeaderProduct";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext";
+import { useProductReviews } from "./useProductReviews";
 
 import OverView from "./OverView";
 import Details from "./Details";
@@ -9,9 +10,7 @@ import Reviews from "./Reviews";
 import MapLocation from "./MapLocation";
 import OperationsBar from "./OperationsBar";
 import SkeletonProduct from "./SkeletonProduct";
-
 import DotsLoaderFullPage from "../../ui/DotsLoaderFullPage";
-import { useProductReviews } from "./useProductReviews";
 
 function Product() {
   const { isLoadingProduct, product = {} } = useProduct();
@@ -59,7 +58,7 @@ function Product() {
   if (isLoadingProduct || isLoading) return <SkeletonProduct />;
 
   return (
-    <div className="px-32 py-5 flex flex-col gap-6">
+    <div className="px-[7.4rem] py-5 flex flex-col gap-4">
       {showHeaderProduct && (
         <HeaderProduct showHeaderProductBookView={showHeaderProductBookView} />
       )}

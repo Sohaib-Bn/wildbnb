@@ -4,7 +4,7 @@ import Wishlist from "./Wishlist";
 
 function User() {
   return (
-    <div className="user flex items-center gap-2 grow-[0.6] justify-end">
+    <div className="user text-sm flex items-center gap-2 grow-[0.6] justify-end">
       <Wishlist />
       <LanguageChanger />
       <AccountMenu />

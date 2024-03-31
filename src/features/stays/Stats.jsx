@@ -10,9 +10,9 @@ function Stats({ stays }) {
   const numStays = stays.length;
   return (
     <div className="">
-      <div className="flex flex-col gap-8 sticky top-[var(--statics-sticky-top)]">
+      <div className="flex flex-col gap-6 sticky top-[var(--statics-sticky-top)]">
         <DurationChart stays={stays} />
-        <div className="grid grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-2 gap-6">
           <Stat
             icon={<HiOutlineBanknotes className="w-full h-full" />}
             label="Total amount"

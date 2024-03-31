@@ -9,7 +9,7 @@ function ButtonMap() {
   return (
     <button
       onClick={() => setShowMapProducts((state) => !state)}
-      className="shadow-2xl bg-colorBlackLight/90 text-colorWhite px-5 py-[15.5px]  font-medium transition-all duration-300 hover:scale-105 rounded-full flex items-center gap-2 text-[14.6px] "
+      className="shadow-2xl bg-colorBlackLight/90 text-colorWhite px-4 py-[13.5px] font-medium transition-all duration-300 hover:scale-105 rounded-full flex items-center gap-2 text-[13.5px] "
     >
       <span>
         {showMapProducts ? t("show_list_button") : t("show_map_button")}

@@ -16,7 +16,7 @@ function SelectCapacity() {
         <button
           key={option.value}
           onClick={(e) => handleClick(e, option.value)}
-          className={`border border-colorGrey300 flex items-center justify-center bg-none transition-all hover:border-colorBlackLight text-base min-w-16 py-[0.6rem] px-3 rounded-full ${
+          className={`border text-sm border-colorGrey300 flex items-center justify-center bg-none transition-all hover:border-colorBlackLight min-w-14 py-[0.6rem] px-2 rounded-full ${
             maxCapacity === option.value
               ? "bg-colorBlackLight text-colorGrey100"
               : ""

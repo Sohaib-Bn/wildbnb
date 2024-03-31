@@ -51,13 +51,13 @@ function ProductCard({ productData }) {
       onClick={handleClick}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="h-[20rem] flex flex-col gap-3"
+      className="h-[18rem] flex flex-col gap-[0.6rem]"
     >
       <div className="relative overflow-hidden rounded-[15px]">
         <div
           onMouseEnter={handleHeartMouseEnter}
           onMouseLeave={handleHeartMouseLeave}
-          className="button-like absolute top-3 right-5 z-30 text-[1.8rem] text-colorWhite hover:scale-110 transition-all"
+          className="button-like absolute top-3 right-5 z-30 text-colorWhite hover:scale-110 transition-all"
         >
           <LikeButton productId={id} type="icon" />
         </div>
@@ -73,15 +73,15 @@ function ProductCard({ productData }) {
             isHover ? "translate-y-0" : "translate-y-[60%]"
           }`}
         >
-          <FaEye size={50} color="white" />
+          <FaEye size={45} color="white" />
         </div>
         {isGuestsFavorite && (
-          <div className="px-[0.7rem] py-[0.35rem] bg-colorWhite rounded-full absolute top-3 left-3 text-[13.5px] font-medium  shadow-xl">
+          <div className="px-[0.7rem] py-[0.35rem] bg-colorWhite rounded-full absolute top-3 left-3 text-xs font-medium  shadow-xl">
             {t("products:product_card.favGuest")}
           </div>
         )}
       </div>
-      <div className="grow flex flex-col gap-[1px]">
+      <div className="grow text-[0.9rem] flex flex-col gap-[2px]">
         <div className="flex items-center justify-between">
           <h5 className="">{location}</h5>
           <div className="flex justify-between gap-[5px] text-colorGrey900">
@@ -95,8 +95,8 @@ function ProductCard({ productData }) {
           {t("products:product_card.capacity", { capacity: maxCapacity })}
         </p>
         <div className="flex items-center justify-between mt-1">
-          <div className="flex items-center gap-3 mt-1">
-            <p className="font-cairo font-semibold text-lg">
+          <div className="flex items-center gap-3">
+            <p className="font-cairo font-semibold text-[1rem]">
               {t("products:product_card.price", {
                 price: formatCurrency(
                   regularPriceConverted,

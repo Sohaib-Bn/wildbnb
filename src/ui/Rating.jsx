@@ -14,7 +14,7 @@ const CustomizedRating = styled(RatingMui)`
   }
 `;
 
-function Rating({ size = "1.5rem", value = 4, ...props }) {
+function Rating({ size = "1.4rem", value = 4, ...props }) {
   return (
     <div>
       <CustomizedRating

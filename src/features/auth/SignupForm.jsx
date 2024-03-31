@@ -2,17 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useSignup } from "./useSignup";
-import Divider from "@mui/material/Divider";
+import { useSignupWithGoogle } from "./useSignupWithGoogle";
 
+import Divider from "@mui/material/Divider";
 import Button from "../../ui/Button";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
 import DotsLoader from "../../ui/DotsLoader";
 import Swal from "sweetalert2";
+import ButtonGoogle from "../../ui/ButtonGoogle";
 
 import withReactContent from "sweetalert2-react-content";
-import ButtonGoogle from "../../ui/ButtonGoogle";
-import { useSignupWithGoogle } from "./useSignupWithGoogle";
 
 const MySwal = withReactContent(Swal);
 
@@ -71,7 +71,7 @@ function SignupForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-colorWhite flex flex-col gap-6 w-[30rem] border rounded-sm border-colorGrey100 py-[2.4rem] px-[2.9rem]"
+      className="bg-colorWhite flex flex-col gap-6 w-[28rem] border rounded-sm border-colorGrey100 py-[2.4rem] px-[2.9rem] text-xs"
     >
       <ButtonGoogle
         onClick={(e) => {
@@ -79,7 +79,7 @@ function SignupForm() {
           signupWithGoogle();
         }}
       />
-      <Divider>OR</Divider>
+      <Divider className="text-sm">OR</Divider>
       <FormRow
         error={errors?.fullName?.message}
         orientaion="vertical"
@@ -162,7 +162,7 @@ function SignupForm() {
         )}
       </Button>
 
-      <div className="text-sm">
+      <div className="text-xs">
         <span>Do you have already account ?</span>{" "}
         <button
           onClick={(e) => {

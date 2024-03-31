@@ -58,6 +58,11 @@ function AppProvider({ children }) {
   }, [i18n, i18n.language]);
 
   useEffect(() => {
+    const currLng = i18n.language.split("-");
+    if (currLng.length > 1) i18n.changeLanguage(currLng[0]);
+  }, [i18n]);
+
+  useEffect(() => {
     const redirectTo = sessionStorage.getItem("redirectTo");
     if (redirectTo) {
       sessionStorage.removeItem("redirectTo");

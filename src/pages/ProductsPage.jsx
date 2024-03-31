@@ -16,10 +16,10 @@ function ProductsPage() {
       >
         <ProductsOperationsBar />
         {showMapProducts && <MapProducts />}
-        <div className="px-16">
+        <div className="px-14">
           {!showMapProducts && <Products />}
           <div
-            className={`fixed bottom-11 left-1/2 -translate-x-1/2 z-[1010] transition-all duration-200 ${
+            className={`fixed bottom-10 left-1/2 -translate-x-1/2 z-[1010] transition-all duration-200 ${
               !isMapButtonVisible ? "opacity-0 invisible" : ""
             }`}
           >

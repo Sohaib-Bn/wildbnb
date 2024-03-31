@@ -8,7 +8,7 @@ const colorGrey700 = tailwindConfig.theme.colors.colorGrey700;
 const CutomizedSlider = styled(Slider)`
   color: ${colorGrey900};
   cursor: default;
-  height: 10px;
+  height: 9px;
   & .MuiSlider-thumb {
     display: none;
   }

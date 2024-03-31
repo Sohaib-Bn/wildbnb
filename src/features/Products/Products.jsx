@@ -43,7 +43,7 @@ function Products() {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="grid grid-cols-4 gap-x-7 gap-y-9 ">
+      <div className="grid grid-cols-4 gap-x-6 gap-y-9 ">
         {isLoading ? (
           <SkeletonProductCard cards={8} />
         ) : (
@@ -55,12 +55,12 @@ function Products() {
 
       {hasNextPage && (
         <div className="flex flex-col justify-center items-center gap-4">
-          <h3 className="text-lg font-semibold">
+          <h3 className="text font-semibold">
             {t("common:show_more_section.title", {
               product: productNameTranslated,
             })}
           </h3>
-          <Button onClick={fetchNextPage}>
+          <Button size="small" onClick={fetchNextPage}>
             {isFetchingNextPage
               ? "Loading..."
               : t("common:show_more_section.button")}

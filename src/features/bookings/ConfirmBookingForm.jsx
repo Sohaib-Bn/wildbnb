@@ -176,7 +176,10 @@ function ConfirmBookingForm() {
   }, [setValue, userFullName, userEmail]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-7">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-7 text-sm"
+    >
       <FormRow label="Full name" error={errors?.fullName?.message}>
         <Input
           disabled={isCreating}

@@ -75,11 +75,11 @@ function SearchBar() {
       onClick={handleFormClick}
       ref={ref}
       onSubmit={handleSubmit}
-      className={`search-bar relative cursor-pointer px-3 origin-left flex justify-between items-center transition-all duration-300 bg-colorGrey0 border border-colorGrey200 shadow hover:shadow-md shadow-slate-50 w-[24rem] rounded-full text-[15px] ${
-        isActive ? "w-[35rem] shadow-sm" : ""
+      className={`search-bar relative cursor-pointer px-3 origin-left flex justify-between items-center transition-all duration-300 bg-colorGrey0 border border-colorGrey200 shadow hover:shadow-md shadow-slate-50 w-[22rem] rounded-full text-sm ${
+        isActive ? "w-[30rem] shadow-sm" : ""
       }`}
     >
-      <div className="grow py-[15px] px-3">
+      <div className="grow py-[10px] px-3">
         <input
           name="location"
           type="text"
@@ -108,8 +108,8 @@ function SearchBar() {
       </div>
 
       <button
-        className={`h-9 w-9 bg-colorBrand700 rounded-full flex justify-center items-center text-colorWhite transition-all duration-300 hover:bg-colorBrand800 ${
-          isActive ? "w-[6rem] justify-start gap-2" : ""
+        className={`h-8 w-8 bg-colorBrand700 rounded-full flex justify-center items-center text-colorWhite transition-all duration-300 hover:bg-colorBrand800 ${
+          isActive ? "w-[6.1rem] justify-start gap-2" : ""
         }`}
       >
         <FaMagnifyingGlass color="white" />

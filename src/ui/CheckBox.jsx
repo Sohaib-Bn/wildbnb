@@ -78,6 +78,7 @@ function CustomizedCheckbox({ value, handleChange, children }) {
         sx={{
           width: "max-content",
           ".MuiFormControlLabel-label": {
+            fontSize: "inherit",
             fontFamily: "inherit",
             marginLeft: "5px",
           },

@@ -27,14 +27,14 @@ function ProductTypeLink({ icon, label }) {
       >
         {({ isActive }) => (
           <div
-            className={`transition-colors duration-200 flex items-center flex-col gap-2 justify-center hover:text-colorBlack hover:border-colorGrey300 h-[5rem] ${
+            className={`transition-colors duration-200 flex items-center flex-col gap-2 justify-center hover:text-colorBlack hover:border-colorGrey300 h-[4.5rem] ${
               isActive
                 ? "border-b-[2.5px] border-colorBlack text-colorBlack/100 cursor-default pointer-events-none"
                 : "border-b-[2.5px] border-colorBlack/0 text-colorGrey500 "
             }`}
           >
-            {icon}
-            <span className="text-sm font-medium captilized">
+            <span className="text-[1.55rem]">{icon}</span>
+            <span className="text-[0.8rem] font-medium captilized">
               {t(`products_type.${label}`)}
             </span>
           </div>

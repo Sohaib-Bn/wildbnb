@@ -11,7 +11,6 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "100vw",
-  maxHeight: "85vh",
   backgroundColor: "white",
   boxShadow: 5,
   borderRadius: "15px",
@@ -41,7 +40,7 @@ function Open({ children, opens }) {
   return cloneElement(children, { onClick: () => handleOpen(opens) });
 }
 
-function Window({ children, name, maxWidth = "840px", closeButton = true }) {
+function Window({ children, name, maxWidth = "750px", closeButton = true }) {
   const { opens, handleClose } = useContext(ModalContext);
   const windowStyle = { ...style, maxWidth };
 
@@ -64,7 +63,7 @@ function Window({ children, name, maxWidth = "840px", closeButton = true }) {
         <Box sx={windowStyle}>
           {closeButton && (
             <div className="absolute top-6 left-6">
-              <button onClick={handleClose} className="text-[1.4rem]">
+              <button onClick={handleClose} className="text-[1.2rem]">
                 <HiXMark />
               </button>
             </div>

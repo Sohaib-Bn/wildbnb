@@ -29,13 +29,13 @@ function FiltersButton({ onClick }) {
     <div className="relative">
       <button
         onClick={onClick}
-        className={`text-colorGrey900 flex items-center bg-transparent px-4 h-14 rounded-[12px] gap-3 text-[14px] font-medium ${
+        className={`text-colorGrey900 flex items-center bg-transparent px-[0.9rem] h-[3.2rem] rounded-[12px] gap-3 text-[12.5px] font-medium ${
           filtersCount
-            ? "border-colorGrey900 border-[2.3px]"
+            ? "border-colorGrey900 border-[2px]"
             : "border-colorGrey300 border"
         }`}
       >
-        <TbAdjustmentsHorizontal size={24} />
+        <TbAdjustmentsHorizontal className="text-[1.4rem]" />
         <span>{t("common:filter_button")}</span>
       </button>
       {Boolean(filtersCount) && (

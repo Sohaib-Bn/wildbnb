@@ -5,7 +5,7 @@ function GuestsFavorite({ type, link = "#reviews-section" }) {
     <a
       onClick={handleLinkScroll}
       href={link}
-      className="flex items-center gap-6 border border-colorGrey300 px-7 py-5 rounded-xl"
+      className="flex items-center text-sm gap-6 border border-colorGrey300 px-6 py-4 rounded-xl"
     >
       <div className="flex items-center gap-1">
         <div className="w-auto">
@@ -84,7 +84,7 @@ function GuestsFavorite({ type, link = "#reviews-section" }) {
           </svg>
         </div>
         <div className="">
-          <div className="font-medium text-[1.2rem] text-colorBlackLight p-1 text-center leading-6">
+          <div className="font-medium text-[1.05rem] text-colorBlackLight p-1 text-center leading-6">
             Guests <br /> favorite
           </div>
         </div>
@@ -164,7 +164,7 @@ function GuestsFavorite({ type, link = "#reviews-section" }) {
           </svg>
         </div>
       </div>
-      <div className="font-medium text-[1.05rem]">
+      <div className="font-medium text-[0.95rem]">
         One of the most loved {type} on The Wild Oasis, according to guests
       </div>
     </a>

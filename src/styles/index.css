@@ -58,9 +58,9 @@
     --border-radius-md: 7px;
     --border-radius-lg: 9px;
 
-    --navigation-bar-offset: 6rem;
+    --navigation-bar-offset: 5.5rem;
 
-    --validation-form-sticky-top: calc(var(--navigation-bar-offset) + 100px);
+    --validation-form-sticky-top: calc(var(--navigation-bar-offset) + 80px);
     --statics-sticky-top: calc(var(--navigation-bar-offset) + 40px);
   }
 
@@ -84,11 +84,6 @@
     font: inherit;
     color: inherit;
   }
-
-  /* input:focus {
-    outline: 1px solid blue;
-    border-color: currentColor;
-  } */
 
   button {
     cursor: pointer;

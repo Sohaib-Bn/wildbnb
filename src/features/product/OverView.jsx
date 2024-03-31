@@ -51,7 +51,7 @@ function OverView({ setShowHeaderProduct }) {
     <div
       id="overview-section"
       ref={overviewRef}
-      className="grid grid-cols-[1fr_1.2fr] gap-10 justify-start"
+      className="grid grid-cols-[1fr_1.2fr] gap-9 justify-start"
     >
       <div className="flex flex-col gap-10">
         <Modal>
@@ -70,11 +70,13 @@ function OverView({ setShowHeaderProduct }) {
         </Modal>
       </div>
       <div>
-        <h1 className="font-semibold text-colorBlack text-2xl mb-3">{name}</h1>
-        <h2 className="font-semibold text-colorBlack text-xl mb-3">
+        <h1 className="font-semibold text-colorBlack text-[1.3rem] mb-[0.6rem]">
+          {name}
+        </h1>
+        <h2 className="font-semibold text-colorBlack text-[1.05rem] mb-3">
           About the proprety
         </h2>
-        <p className="leading-7">{description}</p>
+        <p className="leading-7 text-sm">{description}</p>
       </div>
     </div>
   );

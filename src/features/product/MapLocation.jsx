@@ -14,11 +14,11 @@ function MapLocation() {
     .map((coord) => parseFloat(coord.trim())); // Convert strings to numbers
 
   return (
-    <div id="location-section" className="flex flex-col gap-6">
-      <h2 className="font-semibold text-colorBlack text-2xl">
+    <div id="location-section" className="flex flex-col gap-6 mt-5">
+      <h2 className="font-semibold text-colorBlack text-[1.35rem]">
         Where you'll be
       </h2>
-      <div className="bg-colorGrey100 h-[25rem] relative">
+      <div className="bg-colorGrey100 h-[22rem] relative">
         <MapContainer
           center={position}
           zoom={14}

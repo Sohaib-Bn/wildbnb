@@ -10,12 +10,11 @@ import { addDays, differenceInDays, isSameDay, format } from "date-fns";
 import Button from "../../ui/Button";
 import DotsLoader from "../../ui/DotsLoader";
 import tailwindConfig from "../../../tailwind.config";
-
-import "react-datepicker/dist/react-datepicker.css";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
 import Input from "../../ui/Input";
 import FormRow from "../../ui/FormRow";
+
+import "../../styles/dateRangeDefault.css";
+import "../../styles/dateRangeStyle.css";
 
 const colorBrand800 = tailwindConfig.theme.colors.colorBrand800;
 
@@ -226,9 +225,9 @@ function BookingValidationForm({ setShowHeaderProductBookView }) {
       onSubmit={handleSubmit}
       ref={formRef}
       id="booking-section"
-      className="flex flex-col gap-8 sticky top-[var(--validation-form-sticky-top)] z-[1000]"
+      className="flex flex-col gap-8 text-sm sticky top-[var(--validation-form-sticky-top)] z-[1000]"
     >
-      <h1 className="font-semibold text-3xl text-colorBlack">
+      <h1 className="font-semibold text-[1.65rem] text-colorBlack">
         Request to book
       </h1>
       <div className="flex flex-col gap-6 w-[90%]">
@@ -267,15 +266,17 @@ function BookingValidationForm({ setShowHeaderProductBookView }) {
               <span className="font-semibold">Date range is unavailable</span>
             </div>
           )}
-        <Button disabled={!isDateRangeAvailable} variation="tertiary">
-          {isChecking ? (
-            <div className="p-2">
-              <DotsLoader />
-            </div>
-          ) : (
-            "Reserve"
-          )}
-        </Button>
+        <div className="text-base">
+          <Button disabled={!isDateRangeAvailable} variation="tertiary">
+            {isChecking ? (
+              <div className="p-2">
+                <DotsLoader />
+              </div>
+            ) : (
+              "Reserve"
+            )}
+          </Button>
+        </div>
       </div>
     </form>
   );

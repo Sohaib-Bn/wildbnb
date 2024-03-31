@@ -12,6 +12,7 @@ import Skeleton from "react-loading-skeleton";
 
 function Wishlist() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const { t } = useTranslation(["glossary"]);
 
   const { isAuthorized } = useAppContext();
   const navigate = useNavigate();
@@ -37,9 +38,9 @@ function Wishlist() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        className="px-4 py-2 rounded-full transition-all hover:bg-colorZind200 text-colorBlack font-normal"
+        className="px-[1rem] py-[0.7rem] rounded-full transition-all hover:bg-colorZind200 text-colorBlack"
       >
-        Wishlist
+        {t("wishlist")}
       </button>
       {isAuthorized && open && (
         <WishlistMenu
@@ -84,7 +85,7 @@ function WishlistMenu({ anchorEl, open, handleClose }) {
           overflowX: "hidden",
           overflowY: "scrool",
         },
-        className: "hide-scrollbar",
+        className: "hide-scrollbar text-sm",
       }}
     >
       {isLoading && <WishlistSkeleton />}
@@ -120,6 +121,7 @@ function WishlistItem({ product, handleClose }) {
   return (
     <MenuItem
       style={{
+        fontSize: "inherit",
         fontFamily: "inherit",
       }}
       onClick={handleClick}
@@ -136,7 +138,7 @@ function WishlistItem({ product, handleClose }) {
           <p className="font-medium">{name}</p>
           <p className="text-sm">{location}</p>
           <div className="flex items-center gap-2">
-            <p className="font-cairo font-semibold">
+            <p className="font-cairo font-bold">
               {formatCurrency(
                 regularPriceConverted,
                 i18n.language,
@@ -144,7 +146,7 @@ function WishlistItem({ product, handleClose }) {
               )}
             </p>
             <span>&bull;</span>
-            <div className="flex items-center gap-1 text-sm">
+            <div className="flex items-center gap-1 text-sm text-colorGrey800/80">
               <span className="text-xs mb-[1px]">
                 <FaStar />
               </span>

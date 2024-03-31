@@ -20,7 +20,7 @@ function FavoritesOnly() {
   return (
     <button
       onClick={handleChecked}
-      className="text-colorGrey900 flex items-center justify-between border border-colorGrey300 bg-transparent px-4  rounded-[12px] gap-3 text-[14px] font-medium h-14"
+      className="text-colorGrey900 flex items-center justify-between border border-colorGrey300 bg-transparent rounded-[12px] gap-3 text-xs font-medium px-[0.9rem] h-[3.2rem]"
     >
       <span>{t("onlyFavorites_button")}</span>
       <Switch checked={showOnlyFavorite} />

@@ -1,6 +1,6 @@
 import { useFiltersProductsContext } from "../../../context/FiltersProductsContext";
-import SelectCheckBox from "../../../ui/SelectCheckBox";
 import { AMNETITIES_OPTIONS } from "../../../utils/constants";
+import SelectCheckBox from "../../../ui/SelectCheckBox";
 
 function SelectAmentities() {
   const { selectedAmentities, setSelectedAmentities } =

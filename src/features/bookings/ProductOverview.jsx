@@ -5,10 +5,10 @@ import { formatCurrency } from "../../utils/helpers";
 import { useAppContext } from "../../context/AppContext";
 import { useTranslation } from "react-i18next";
 import { useBookingContenxt } from "../../context/ValidatedBookingContext";
+import { useSettings } from "./useSettings";
 
 import CurrenyChanger from "../../ui/CurrencyChanger";
 import Modal from "../../ui/Modal";
-import { useSettings } from "./useSettings";
 
 function ProductOverview() {
   const { count } = useProductReviews();
@@ -28,9 +28,9 @@ function ProductOverview() {
   const regularPriceConverted = regularPrice * convertedCurrency;
 
   return (
-    <div className="flex flex-col gap-7 rounded-xl border border-colorGrey200 p-6 sticky top-[80px]">
+    <div className="flex flex-col gap-6 rounded-xl border border-colorGrey200 p-5 sticky top-[80px]">
       <div className="flex items-center gap-5">
-        <figure className="w-[7.3rem] h-[6.5rem]">
+        <figure className="w-[6.5rem] h-[6rem]">
           <img
             className="w-full h-full object-cover rounded-xl"
             src={image}
@@ -38,24 +38,20 @@ function ProductOverview() {
           />
         </figure>
         <div className="flex flex-col gap-1">
-          <h1 className="font-medium text-colorBlack text-[1.105rem]">
-            {name}
-          </h1>
-          <div className="flex items-center gap-1">
-            <p className="capitalize text-[0.95rem] text-colorGrey700 font-normal">
-              {type}
-            </p>
+          <h1 className="font-medium text-colorBlack text-[1rem]">{name}</h1>
+          <div className="flex items-center text-[0.85rem] gap-1">
+            <p className="capitalize text-colorGrey700 font-normal">{type}</p>
             <span>&bull;</span>
             <span>{location}</span>
           </div>
           <div className="flex items-center gap-1">
-            <span className="text-colorBlackLight mb-1 text-sm">
+            <span className="text-colorBlackLight mb-1 text-xs">
               <FaStar />
             </span>
-            <span className="font-medium text-colorBlackLight">
+            <span className="font-medium  text-sm text-colorBlackLight">
               {averageRate}
             </span>
-            <span className="text-[0.95rem] text-colorGrey700 font-normal">
+            <span className="text-[0.85rem] text-colorGrey700 font-normal">
               ({count} reviews)
             </span>
           </div>
@@ -63,10 +59,10 @@ function ProductOverview() {
       </div>
       <Divider />
       <div className="flex flex-col gap-6">
-        <h1 className="font-medium text-2xl text-colorBlackLight">
+        <h1 className="font-medium text-xl text-colorBlackLight">
           Price details
         </h1>
-        <div className="flex items-center justify-between text-[1.05rem]">
+        <div className="flex items-center justify-between text-[0.95rem]">
           <p className="font-cairo font-semibold">
             {formatCurrency(
               regularPriceConverted,
@@ -85,8 +81,7 @@ function ProductOverview() {
         </div>
         <div className="flex items-center justify-between text-[1.05rem]">
           <Extras />
-
-          <p className="font-cairo font-semibold">
+          <p className="font-cairo font-semibold ">
             {Boolean(bookingExtrasPrice) ? (
               formatCurrency(
                 bookingExtrasPrice,
@@ -101,12 +96,12 @@ function ProductOverview() {
       </div>
       <Divider />
       <div className="flex flex-col gap-4">
-        <div className="flex items-center justify-between text-[1.1rem] font-semibold text-colorBlack">
+        <div className="flex items-center justify-between text-base font-semibold text-colorBlack">
           <p className="flex items-center gap-1 ">
             <span>Total</span>
             (<CurrenyChanger showCurrencyIcon={false} underline={true} />)
           </p>
-          <p className="font-cairo font-semibold">
+          <p className="font-cairo font-bold">
             {formatCurrency(bookingTotalPrice, i18n.language, selectedCurrency)}
           </p>
         </div>
@@ -120,7 +115,7 @@ function Extras() {
   return (
     <Modal>
       <Modal.Open opens="Extras">
-        <button className="underline self-start">Extras</button>
+        <button className="underline self-start text-sm">Extras</button>
       </Modal.Open>
       <Modal.Window name="Extras" maxWidth="30rem" closeButton={false}>
         <ExtrasModal />
@@ -191,7 +186,7 @@ function HowToPay() {
   return (
     <Modal>
       <Modal.Open opens="howToPay">
-        <button className="underline self-start">How to pay</button>
+        <button className="underline text-sm self-start">How to pay</button>
       </Modal.Open>
       <Modal.Window name="howToPay" maxWidth="25rem" closeButton={false}>
         <HowToPayModal />
@@ -202,7 +197,7 @@ function HowToPay() {
 
 function HowToPayModal() {
   return (
-    <div className="p-6">
+    <div className="p-6 text-sm">
       <p>Payment will be collected on delivery</p>
     </div>
   );
