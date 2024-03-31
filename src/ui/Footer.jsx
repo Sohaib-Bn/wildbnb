@@ -44,19 +44,25 @@ function Footer() {
     >
       <div className="flex flex-col gap-5">
         <div className="flex gap-2">
-          <p>&copy; {new Date().getFullYear()} the wild oasis,</p>
+          <p>&copy; {new Date().getFullYear()} the wild oasis</p>
           <ul className="flex gap-2">
             <FooterLink>{t("terms")}</FooterLink>
             <FooterLink>{t("policy")}</FooterLink>
           </ul>
         </div>
         <hr />
-        <div>
+        <div className="flex items-center gap-3">
           {t("author")}{" "}
-          <a href="/" className="hover:underline transition-all duration-300">
-            {" "}
+          <a
+            href="https://sodev.live"
+            className="hover:underline transition-all duration-300"
+          >
             Sohaib Benyamna
           </a>
+          <span>&bull;</span>
+          <p>Design inspired from airbnb</p>
+          <span>&bull;</span>
+          <p>The platform still in the beta copy</p>
         </div>
       </div>
       <div className="flex items-center justify-between gap-8">
