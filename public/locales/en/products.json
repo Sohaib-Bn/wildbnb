@@ -1,0 +1,7 @@
+{
+  "product_card": {
+    "capacity": "Fits up {{capacity}} guests",
+    "favGuest": "Guests favorite",
+    "price": "{{price}} night"
+  }
+}

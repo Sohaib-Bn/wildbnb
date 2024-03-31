@@ -1,0 +1,16 @@
+{
+  "onlyFavorites_button": "Afficher just les favoris",
+  "products_type": {
+    "beach": "plages",
+    "beds": "lits",
+    "boats": "bateaux",
+    "cabins": "cabines",
+    "castles": "châteaux",
+    "parks": "parcs",
+    "pools": "piscines",
+    "tower": "tours"
+  },
+  "search_bar_placeholder": "Recherche par ville",
+  "search_button": "Cherche",
+  "your_stays_button": "Vos séjours"
+}

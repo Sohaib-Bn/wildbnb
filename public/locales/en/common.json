@@ -1,0 +1,17 @@
+{
+  "choose_currency_form": {
+    "title": "Choose currency"
+  },
+  "clear_button": "Clear all",
+  "confirm_button": "Confirm",
+  "currency": "Currency",
+  "empty_data": "No {{label}} data to show at the moment",
+  "filter_button": "Filters",
+  "show_map_button": "Show map",
+  "show_list_button": "Show list",
+  "show_more_section": {
+    "button": "Show more",
+    "title": "Continue exploring {{product}}"
+  },
+  "request_to_book": "Request to book"
+}

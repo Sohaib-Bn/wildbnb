@@ -1,0 +1,17 @@
+{
+  "choose_currency_form": {
+    "title": "اختر العملة"
+  },
+  "clear_button": "مسح الكل",
+  "confirm_button": "تأكيد",
+  "currency": "عملة",
+  "empty_data": "لا  توجد بيانات حول {{label}} يتم عرضها في الوقت الحالي",
+  "filter_button": "تصفية",
+  "show_map_button": "عرض الخريطة",
+  "show_list_button": "عرض القائمة",
+  "show_more_section": {
+    "button": "أظهر المزيد",
+    "title": "مواصلة استكشاف {{product}}"
+  },
+  "request_to_book": "طلب الحجز"
+}

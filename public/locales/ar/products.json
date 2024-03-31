@@ -1,0 +1,7 @@
+{
+  "product_card": {
+    "capacity": "يناسب {{capacity}} ضيوف",
+    "favGuest": "مفضلة الضيوف",
+    "price": "{{price}} ليلة"
+  }
+}

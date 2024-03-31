@@ -1,0 +1,20 @@
+{
+  "filter": {
+    "amentities": {
+      "description": "Choisissez les prépretés essentielles ",
+      "title": "commodités"
+    },
+    "capacity": {
+      "description": "Nombre maximum d'invités par propriété",
+      "title": "Capacité"
+    },
+    "place_type": {
+      "description": "Rechercher des pièces, des maisons entières ou tout type de lieu",
+      "title": "Type d'établissement"
+    },
+    "price_range": {
+      "description": "Prix ​​par nuit avant frais et taxes",
+      "title": "Échelle des prix"
+    }
+  }
+}

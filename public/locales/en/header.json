@@ -1,0 +1,16 @@
+{
+  "onlyFavorites_button": "Show favorite guests only",
+  "products_type": {
+    "beach": "beaches",
+    "beds": "beds",
+    "boats": "boats",
+    "cabins": "cabins",
+    "castles": "castles",
+    "parks": "parks",
+    "pools": "pools",
+    "tower": "towers"
+  },
+  "search_bar_placeholder": "Search by city",
+  "search_button": "Search",
+  "your_stays_button": "Your stays"
+}

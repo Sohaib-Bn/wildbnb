@@ -1,0 +1,17 @@
+{
+  "choose_currency_form": {
+    "title": "Choisir la devise"
+  },
+  "clear_button": "Tout effacer",
+  "confirm_button": "Confirmer",
+  "currency": "Devise",
+  "empty_data": "Non {{label}} données à afficher pour le moment",
+  "filter_button": "Filtres",
+  "show_map_button": "Afficher la carte",
+  "show_list_button": "Afficher la liste",
+  "show_more_section": {
+    "button": "Montre plus",
+    "title": "Continuer à explorer {{product}}"
+  },
+  "request_to_book": "Demande de réservation"
+}

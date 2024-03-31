@@ -1,0 +1,16 @@
+{
+  "onlyFavorites_button": "إظهار المفضلة فقط",
+  "products_type": {
+    "beach": "الشواطئ",
+    "beds": "أسرة",
+    "boats": "قوارب",
+    "cabins": "أكواخ",
+    "castles": "القلاع",
+    "parks": "المتنزهات",
+    "pools": "حمامات",
+    "tower": "أبراج"
+  },
+  "search_bar_placeholder": "ابحث حسب المدينة",
+  "search_button": "بحث",
+  "your_stays_button": "إقامتك"
+}
