@@ -32,7 +32,7 @@ function ProductsOperationsBar() {
   return (
     <div
       className={`sticky mt-2 top-[var(--navigation-bar-offset)] z-[1000] px-14 h-[6.5rem] grid grid-cols-[48rem_auto_1fr] items-center grow gap-5 transition-[height] duration-200 bg-colorGrey50 ${
-        applyStyle ? "border-b border-colorGrey200 shadow h-[5.51rem]" : ""
+        applyStyle ? "border-b border-colorGrey200 shadow h-[5.1rem]" : ""
       }`}
     >
       <ProductTypeList />
