@@ -12,7 +12,7 @@ function CopyPathButton() {
         setButtonText("Copied");
         setTimeout(() => {
           setButtonText("Copy link");
-        }, 1000); // Revert back to initial text after 3 seconds
+        }, 1000);
       })
       .catch((err) => {
         console.error("Error copying path: ", err);
@@ -24,7 +24,7 @@ function CopyPathButton() {
       onClick={copyPath}
       className="flex items-center gap-4 transition-all p-4 rounded-xl border-colorGrey300 border-solid border-[1px] hover:bg-colorGrey100"
     >
-      <span className="text-[1.4rem]">
+      <span className="text-[1.2rem]">
         <IoCopy />
       </span>
       <span>{buttonText}</span>

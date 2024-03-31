@@ -101,13 +101,16 @@ function BookingValidationForm({ setShowHeaderProductBookView }) {
 
   function handleDateRangeChange(item) {
     setDateRange([item.selection]);
+    const rdrInput = document.querySelectorAll(".rdrDateDisplayItem input");
 
-    const rdrMonthAndYearWrapper = document.querySelector(
-      ".rdrMonthAndYearWrapper"
-    );
-    const rdrMonths = document.querySelector(".rdrMonths");
+    rdrInput[0].focus();
+    rdrInput[1].focus();
 
     if (!isSameDay(item.selection.startDate, item.selection.endDate)) {
+      const rdrMonthAndYearWrapper = document.querySelector(
+        ".rdrMonthAndYearWrapper"
+      );
+      const rdrMonths = document.querySelector(".rdrMonths");
       const rdrDateInputActive = document.querySelector(".rdrDateInput input");
       rdrDateInputActive.setAttribute("id", "input-date-disactive");
 
@@ -187,14 +190,17 @@ function BookingValidationForm({ setShowHeaderProductBookView }) {
         ".rdrMonthAndYearWrapper"
       );
       const rdrMonths = document.querySelector(".rdrMonths");
+      console.log(document.activeElement);
 
       if (rdrWrapper && !rdrWrapper.contains(e.target)) {
         rdrMonthAndYearWrapper.style.display = "none";
         rdrMonths.style.display = "none";
+        // rdrInput.classList.remove("rdrDateDisplayItemActive");
       }
       if (rdrWrapper && e.target.closest(".rdrDateInput")) {
         rdrMonthAndYearWrapper.style.display = "flex";
         rdrMonths.style.display = "flex";
+        // rdrInput.style.border = "1px solid black";
       }
     };
 

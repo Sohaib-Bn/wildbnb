@@ -4,11 +4,12 @@ import { useProducts } from "./useProducts";
 import { formatCurrency } from "../../utils/helpers";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGeolocation } from "../../hooks/UseGealocation";
-
-import DotsLoader from "../../ui/DotsLoader";
-import L from "leaflet";
 import { useAppContext } from "../../context/AppContext";
 import { useTranslation } from "react-i18next";
+
+import L from "leaflet";
+
+import DotsLoader from "../../ui/DotsLoader";
 
 function MapProducts() {
   const {
@@ -42,7 +43,7 @@ function MapProducts() {
   return (
     <div className="h-full overflow-hidden">
       {isLoading && (
-        <div className="absolute flex items-center justify-center rounded-lg w-[5rem] h-[3.5rem] bg-colorWhite/90 shadow-lg z-[10000] right-[50%] top-32 translate-x-[50%]">
+        <div className="absolute flex items-center justify-center rounded-lg w-[5rem] h-[3rem] bg-colorWhite shadow-lg z-[10000] right-[50%] top-32 translate-x-[50%]">
           <DotsLoader type="dark" />
         </div>
       )}

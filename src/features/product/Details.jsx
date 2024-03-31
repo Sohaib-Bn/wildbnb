@@ -113,47 +113,53 @@ function ProductDetails() {
   return (
     <div className="flex flex-col gap-5">
       <h2 className="font-semibold text-colorBlack text-[1.35rem]">Details</h2>
-      <div className="flex flex-col gap-4">
-        <h3 className="text-[1.05rem] font-medium text-colorBlack">
-          Proprety type
-        </h3>
-        <div className="flex items-center gap-3 text-lg text-colorBlack">
-          <span className="text-[1.6rem]">{getTypeIcon(type)}</span>
-          <span className="capitalize">
-            {type === "home" ? "Entire home" : type}
-          </span>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-[1.05rem] font-medium text-colorBlack">
+            Proprety type
+          </h3>
+          <div className="flex items-center gap-3 text-lg text-colorBlack">
+            <span className="text-[1.6rem]">{getTypeIcon(type)}</span>
+            <span className="capitalize">
+              {type === "home" ? "Entire home" : type}
+            </span>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-4">
-        <h3 className="text-[1.05rem] font-medium text-colorBlack">
-          Essential amentities
-        </h3>
-        <ul className="grid grid-cols-2">
-          <li
-            className={`flex items-center gap-3 text-lg ${
-              !amentities.includes("wifi") ? "line-through" : ""
-            }`}
-          >
-            <span className="text-[1.6rem] text-colorBlack">
-              {amentities.includes("wifi") ? <RiWifiLine /> : <RiWifiOffLine />}
-            </span>
-            <span>Wifi</span>
-          </li>
-          <li
-            className={`flex items-center gap-3 text-lg ${
-              !amentities.includes("conditioner") ? "line-through" : ""
-            }`}
-          >
-            <span className="text-[1.6rem] text-colorBlack">
-              {amentities.includes("conditioner") ? (
-                <IoIosSnow />
-              ) : (
-                <TbSnowflakeOff />
-              )}
-            </span>
-            <span>Air conditioner</span>
-          </li>
-        </ul>
+        <div className="flex flex-col gap-4">
+          <h3 className="text-[1.05rem] font-medium text-colorBlack">
+            Essential amentities
+          </h3>
+          <ul className="grid grid-cols-2">
+            <li
+              className={`flex items-center gap-3 text-lg ${
+                !amentities.includes("wifi") ? "line-through" : ""
+              }`}
+            >
+              <span className="text-[1.6rem] text-colorBlack">
+                {amentities.includes("wifi") ? (
+                  <RiWifiLine />
+                ) : (
+                  <RiWifiOffLine />
+                )}
+              </span>
+              <span>Wifi</span>
+            </li>
+            <li
+              className={`flex items-center gap-3 text-lg ${
+                !amentities.includes("conditioner") ? "line-through" : ""
+              }`}
+            >
+              <span className="text-[1.6rem] text-colorBlack">
+                {amentities.includes("conditioner") ? (
+                  <IoIosSnow />
+                ) : (
+                  <TbSnowflakeOff />
+                )}
+              </span>
+              <span>Air conditioner</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

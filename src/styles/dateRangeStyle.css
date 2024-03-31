@@ -78,7 +78,7 @@
   width: 100%;
   background-color: var(--color-grey-100);
   display: none;
-  font-size: 14px;
+  font-size: 13px;
   box-shadow: var(--shadow-lg);
 }
 
@@ -136,8 +136,8 @@
 
 .rdrDateInput .rdrWarning {
   position: absolute;
-  font-size: 1.6em;
-  line-height: 1.6em;
+  font-size: 1.4em;
+  line-height: 1.4em;
   top: 0;
   right: 0.25em;
   color: #ff0000;
