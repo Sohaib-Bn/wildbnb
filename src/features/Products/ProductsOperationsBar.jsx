@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import { useAppContext } from "../../context/AppContext";
 
 import ProductTypeList from "./ProductTypeList";
 import FavoritesOnly from "./FavoritesOnlys";
 import FiltersModal from "./filters/FiltersModal";
-import { useAppContext } from "../../context/AppContext";
 
 function ProductsOperationsBar() {
   const [isScrolled, setIsScrolled] = useState(false);

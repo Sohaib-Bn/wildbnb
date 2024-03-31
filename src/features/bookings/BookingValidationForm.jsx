@@ -190,7 +190,6 @@ function BookingValidationForm({ setShowHeaderProductBookView }) {
         ".rdrMonthAndYearWrapper"
       );
       const rdrMonths = document.querySelector(".rdrMonths");
-      console.log(document.activeElement);
 
       if (rdrWrapper && !rdrWrapper.contains(e.target)) {
         rdrMonthAndYearWrapper.style.display = "none";
