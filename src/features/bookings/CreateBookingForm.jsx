@@ -19,7 +19,7 @@ import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
 
-function ConfirmBookingForm() {
+function CreateBookingForm() {
   const { selectedCurrency } = useAppContext();
   const { i18n } = useTranslation();
   const [isValidating, setIsValidating] = useState(false);
@@ -87,6 +87,7 @@ function ConfirmBookingForm() {
       observations: observations,
       extrasPrice: bookingExtrasPrice,
       cabinId: id,
+      source: isAuthorized ? "user" : "anon",
       numGuests,
       numNights,
     };
@@ -297,4 +298,4 @@ function ConfirmBookingForm() {
   );
 }
 
-export default ConfirmBookingForm;
+export default CreateBookingForm;

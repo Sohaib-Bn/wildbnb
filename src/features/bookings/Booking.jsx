@@ -7,7 +7,7 @@ import { useAppContext } from "../../context/AppContext";
 
 import Button from "../../ui/Button";
 import ProductOverview from "./ProductOverview";
-import ConfirmBookingForm from "./ConfirmBookingForm";
+import CreateBookingForm from "./ConfirmBookingForm";
 import DotsLoaderFullPage from "../../ui/DotsLoaderFullPage";
 
 function Booking() {
@@ -88,7 +88,7 @@ function Booking() {
             <h2 className="text-xl font-medium text-colorBlack">
               Fill you information to book
             </h2>
-            <ConfirmBookingForm />
+            <CreateBookingForm />
           </div>
         </div>
         <ProductOverview />
