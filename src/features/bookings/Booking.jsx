@@ -7,7 +7,7 @@ import { useAppContext } from "../../context/AppContext";
 
 import Button from "../../ui/Button";
 import ProductOverview from "./ProductOverview";
-import CreateBookingForm from "./ConfirmBookingForm";
+import CreateBookingForm from "./CreateBookingForm";
 import DotsLoaderFullPage from "../../ui/DotsLoaderFullPage";
 
 function Booking() {
